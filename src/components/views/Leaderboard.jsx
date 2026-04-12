@@ -100,12 +100,12 @@ function RoundProgression() {
           <BarChart data={roundProgressData} margin={{ left: 10, right: 10 }}>
             <XAxis
               dataKey="round"
-              tick={{ fill: '#AFADAD', fontSize: 11 }}
+              tick={{ fill: '#FFFFFF', fontSize: 11 }}
               axisLine={{ stroke: 'rgba(255,255,255,0.08)' }}
               tickLine={false}
             />
             <YAxis
-              tick={{ fill: '#AFADAD', fontSize: 11 }}
+              tick={{ fill: '#FFFFFF', fontSize: 11 }}
               axisLine={false}
               tickLine={false}
               width={40}
@@ -140,7 +140,7 @@ function PlayerRow({ player }) {
       style={{ opacity: isActive ? 1 : 0.6 }}
     >
       <td className="py-2 pl-10 pr-3 text-xs text-white">{player.name}</td>
-      <td className="py-2 px-3 text-xs" style={{ color: '#AFADAD' }}>{player.team}</td>
+      <td className="py-2 px-3 text-xs" style={{ color: '#FFFFFF' }}>{player.team}</td>
       <td className="py-2 px-3 text-xs">
         <span
           className="inline-flex items-center justify-center w-6 h-6 rounded-full text-[10px] font-bold"
@@ -154,7 +154,7 @@ function PlayerRow({ player }) {
       </td>
       <td className="py-2 px-3 text-xs text-white font-medium">{player.totalPoints}</td>
       <td className="py-2 px-3">
-        <TrendLine data={roundData} color={isActive ? brand.primary : '#AFADAD'} width={100} height={24} />
+        <TrendLine data={roundData} color={isActive ? brand.primary : '#FFFFFF'} width={100} height={24} />
       </td>
       <td className="py-2 px-3">
         <StatusBadge status={isActive ? 'active' : 'eliminated'} size="xs" />
@@ -181,8 +181,8 @@ function ManagerRow({ standing, rank }) {
           <span
             className="inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold"
             style={{
-              backgroundColor: isFirst ? 'rgba(233, 30, 142, 0.15)' : 'rgba(255,255,255,0.05)',
-              color: isFirst ? brand.primary : '#AFADAD',
+              backgroundColor: isFirst ? 'rgba(56, 189, 248, 0.15)' : 'rgba(255,255,255,0.05)',
+              color: isFirst ? brand.primary : '#FFFFFF',
             }}
           >
             {rank}
@@ -199,13 +199,13 @@ function ManagerRow({ standing, rank }) {
         <td className="py-3 px-3 text-sm font-bold text-white tabular-nums">
           {standing.totalPoints}
         </td>
-        <td className="py-3 px-3 text-xs" style={{ color: '#AFADAD' }}>
+        <td className="py-3 px-3 text-xs" style={{ color: '#FFFFFF' }}>
           {standing.activePlayers}/{standing.totalPlayers}
         </td>
         <td className="py-3 px-3">
           <TrendLine data={roundData} color={brand.primary} />
         </td>
-        <td className="py-3 px-3 text-xs" style={{ color: '#AFADAD' }}>
+        <td className="py-3 px-3 text-xs" style={{ color: '#FFFFFF' }}>
           <span
             className="inline-block transition-transform duration-200"
             style={{ transform: expanded ? 'rotate(90deg)' : 'rotate(0deg)' }}
@@ -251,7 +251,7 @@ function StandingsTable() {
     return (
       <th
         className="py-2 px-3 text-left cursor-pointer select-none"
-        style={{ width, color: isActive ? brand.primary : '#AFADAD' }}
+        style={{ width, color: isActive ? brand.primary : '#FFFFFF' }}
         onClick={() => handleSort(field)}
       >
         <span className="text-[11px] uppercase tracking-widest font-semibold">
@@ -272,13 +272,13 @@ function StandingsTable() {
             <thead>
               <tr className="border-b border-white/8">
                 <th className="py-2 pl-4 pr-3 w-12">
-                  <span className="text-[11px] uppercase tracking-widest font-semibold" style={{ color: '#AFADAD' }}>#</span>
+                  <span className="text-[11px] uppercase tracking-widest font-semibold" style={{ color: '#FFFFFF' }}>#</span>
                 </th>
                 <SortHeader label="Manager" field="manager" />
                 <SortHeader label="Points" field="totalPoints" width="80px" />
                 <SortHeader label="Active" field="activePlayers" width="70px" />
                 <th className="py-2 px-3" style={{ width: '100px' }}>
-                  <span className="text-[11px] uppercase tracking-widest font-semibold" style={{ color: '#AFADAD' }}>Trend</span>
+                  <span className="text-[11px] uppercase tracking-widest font-semibold" style={{ color: '#FFFFFF' }}>Trend</span>
                 </th>
                 <th className="py-2 px-3 w-8" />
               </tr>

@@ -79,12 +79,12 @@ const nodes = [
 ]
 
 const edges = [
-  { id: 'e1', source: 'ncaa-api', target: 'scraper', animated: true, style: { stroke: '#00E5FF' } },
-  { id: 'e2', source: 'scraper', target: 'box-score', animated: true, style: { stroke: '#E91E8E' } },
-  { id: 'e3', source: 'box-score', target: 'matcher', animated: true, style: { stroke: '#E91E8E' } },
-  { id: 'e4', source: 'matcher', target: 'accumulator', animated: true, style: { stroke: '#C4B5FD' } },
-  { id: 'e5', source: 'accumulator', target: 'feed-builder', animated: true, style: { stroke: '#F59E0B' } },
-  { id: 'e6', source: 'feed-builder', target: 'leaderboard-out', animated: true, style: { stroke: '#22C55E' } },
+  { id: 'e1', source: 'ncaa-api', target: 'scraper', animated: true, style: { stroke: '#34D399' } },
+  { id: 'e2', source: 'scraper', target: 'box-score', animated: true, style: { stroke: '#38BDF8' } },
+  { id: 'e3', source: 'box-score', target: 'matcher', animated: true, style: { stroke: '#38BDF8' } },
+  { id: 'e4', source: 'matcher', target: 'accumulator', animated: true, style: { stroke: '#93C5FD' } },
+  { id: 'e5', source: 'accumulator', target: 'feed-builder', animated: true, style: { stroke: '#FBBF24' } },
+  { id: 'e6', source: 'feed-builder', target: 'leaderboard-out', animated: true, style: { stroke: '#34D399' } },
 ]
 
 export { nodes, edges }

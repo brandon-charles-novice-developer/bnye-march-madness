@@ -67,7 +67,7 @@ function RoundRow({ round, picks }) {
         <span
           className="inline-flex items-center justify-center w-8 h-8 rounded-full text-xs font-bold"
           style={{
-            backgroundColor: 'rgba(233, 30, 142, 0.15)',
+            backgroundColor: 'rgba(56, 189, 248, 0.15)',
             color: brand.primary,
           }}
         >
@@ -77,7 +77,7 @@ function RoundRow({ round, picks }) {
           {isReverse ? 'Reverse order' : 'Standard order'}
         </span>
         {isReverse && (
-          <span className="text-[10px] px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(0, 229, 255, 0.15)', color: accent.cyan }}>
+          <span className="text-[10px] px-2 py-0.5 rounded-full" style={{ backgroundColor: 'rgba(52, 211, 153, 0.15)', color: accent.cyan }}>
             SERPENTINE
           </span>
         )}
@@ -100,7 +100,7 @@ function ManagerHeaders() {
       className="grid gap-2 mb-2 sticky top-0 z-10 py-2"
       style={{
         gridTemplateColumns: `repeat(${managers.length}, minmax(120px, 1fr))`,
-        backgroundColor: 'rgba(30, 26, 46, 0.85)',
+        backgroundColor: 'rgba(18, 24, 40, 0.85)',
         backdropFilter: 'blur(12px)',
         marginLeft: '44px',
       }}

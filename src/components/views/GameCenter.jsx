@@ -114,7 +114,7 @@ function RoundTabs({ active, onChange }) {
       <button
         className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
         style={{
-          backgroundColor: active === 'all' ? 'rgba(233, 30, 142, 0.15)' : 'transparent',
+          backgroundColor: active === 'all' ? 'rgba(56, 189, 248, 0.15)' : 'transparent',
           color: active === 'all' ? brand.primary : semantic.muted,
         }}
         onClick={() => onChange('all')}
@@ -128,7 +128,7 @@ function RoundTabs({ active, onChange }) {
             key={round}
             className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
             style={{
-              backgroundColor: active === round ? 'rgba(233, 30, 142, 0.15)' : 'transparent',
+              backgroundColor: active === round ? 'rgba(56, 189, 248, 0.15)' : 'transparent',
               color: active === round ? roundColors[round] : semantic.muted,
             }}
             onClick={() => onChange(round)}

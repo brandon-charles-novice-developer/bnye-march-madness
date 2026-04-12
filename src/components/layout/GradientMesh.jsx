@@ -8,7 +8,7 @@ export default function GradientMesh() {
         zIndex: 0,
         overflow: 'hidden',
         pointerEvents: 'none',
-        backgroundColor: '#1E1A2E',
+        backgroundColor: '#121828',
       }}
     >
       <div
@@ -20,7 +20,7 @@ export default function GradientMesh() {
           top: '10%',
           left: '-5%',
           borderRadius: '50%',
-          background: 'rgba(233, 30, 142, 0.18)',
+          background: 'rgba(56, 189, 248, 0.12)',
           filter: 'blur(80px)',
           willChange: 'transform',
         }}
@@ -34,7 +34,7 @@ export default function GradientMesh() {
           top: '-10%',
           right: '-10%',
           borderRadius: '50%',
-          background: 'rgba(0, 229, 255, 0.15)',
+          background: 'rgba(52, 211, 153, 0.10)',
           filter: 'blur(80px)',
           willChange: 'transform',
         }}
@@ -48,7 +48,7 @@ export default function GradientMesh() {
           bottom: '-15%',
           left: '25%',
           borderRadius: '50%',
-          background: 'rgba(196, 181, 253, 0.10)',
+          background: 'rgba(147, 197, 253, 0.08)',
           filter: 'blur(80px)',
           willChange: 'transform',
         }}

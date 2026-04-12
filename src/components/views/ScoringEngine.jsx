@@ -16,7 +16,7 @@ import { useFadeIn } from '../../hooks/useFadeIn'
 /* ── GlassNode (custom React Flow node) ── */
 
 function GlassNode({ data }) {
-  const color = nodeColors[data.category] ?? '#E91E8E'
+  const color = nodeColors[data.category] ?? '#38BDF8'
 
   return (
     <div
@@ -87,7 +87,7 @@ const defaultEdgeOptions = {
 function DetailPanel({ node, onClose }) {
   if (!node) return null
   const d = node.data
-  const color = nodeColors[d.category] ?? '#E91E8E'
+  const color = nodeColors[d.category] ?? '#38BDF8'
 
   return (
     <div
@@ -97,7 +97,7 @@ function DetailPanel({ node, onClose }) {
         right: 0,
         width: 300,
         height: '100%',
-        background: 'rgba(30,26,46,0.92)',
+        background: 'rgba(18,24,40,0.92)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
         borderLeft: `1px solid ${glass.cardBorder}`,
@@ -152,7 +152,7 @@ function DetailPanel({ node, onClose }) {
 
       {d.file && (
         <div>
-          <h4 style={{ color: 'rgba(255,255,255,0.6)', fontSize: 11, fontWeight: 600, marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Source File</h4>
+          <h4 style={{ color: '#FFFFFF', fontSize: 11, fontWeight: 600, marginBottom: 6, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Source File</h4>
           <span
             style={{
               fontSize: 11,
@@ -207,7 +207,7 @@ export default function ScoringEngine() {
         <Controls
           showInteractive={false}
           style={{
-            background: 'rgba(30,26,46,0.8)',
+            background: 'rgba(18,24,40,0.8)',
             border: `1px solid ${glass.cardBorder}`,
             borderRadius: 8,
             backdropFilter: 'blur(12px)',

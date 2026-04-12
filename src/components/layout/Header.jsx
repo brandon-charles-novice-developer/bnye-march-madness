@@ -33,7 +33,7 @@ export default function Header() {
               end={to === '/'}
               className="px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
               style={({ isActive }) => ({
-                backgroundColor: isActive ? 'rgba(233, 30, 142, 0.15)' : 'transparent',
+                backgroundColor: isActive ? 'rgba(56, 189, 248, 0.15)' : 'transparent',
                 color: isActive ? brand.primary : semantic.muted,
               })}
             >

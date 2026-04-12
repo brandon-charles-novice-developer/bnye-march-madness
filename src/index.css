@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,25 +11,27 @@
 }
 
 body {
-  background-color: #1E1A2E;
+  background-color: #121828;
   color: #FFFFFF;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Sora', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* ---- Scrollbar ---- */
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(233, 30, 142, 0.4); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(233, 30, 142, 0.6); }
+::-webkit-scrollbar-track { background: rgba(56, 189, 248, 0.05); }
+::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(56, 189, 248, 0.5); }
+
+/* ---- Selection ---- */
+::selection { background: rgba(56, 189, 248, 0.25); }
 
 /* ---- Glassmorphism cards ---- */
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: transparent;
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 14px;
   position: relative;
   transition: background 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
@@ -38,33 +40,29 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 50%);
+  background: transparent;
   pointer-events: none;
 }
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(56, 189, 248, 0.04);
+  border-color: rgba(56, 189, 248, 0.3);
 }
 
 /* ---- Glass header ---- */
 .glass-header {
-  background: rgba(30, 26, 46, 0.70);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
 }
 
 /* ---- Glass input ---- */
 .glass-input {
   background: rgba(255, 255, 255, 0.06);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.10);
   transition: border-color 200ms ease, box-shadow 200ms ease;
 }
 .glass-input:focus {
-  border-color: rgba(233, 30, 142, 0.6);
-  box-shadow: 0 0 20px rgba(233, 30, 142, 0.2);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
   outline: none;
 }
 
@@ -84,14 +82,10 @@ body {
   from {
     opacity: 0;
     transform: translateY(12px) scale(0.98);
-    -webkit-backdrop-filter: blur(0px);
-    backdrop-filter: blur(0px);
   }
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
   }
 }
 .glass-enter {
@@ -129,7 +123,7 @@ body {
 }
 .row-hover:hover {
   background-color: rgba(255, 255, 255, 0.05);
-  box-shadow: inset 0 0 30px rgba(233, 30, 142, 0.06);
+  box-shadow: inset 0 0 30px rgba(56, 189, 248, 0.06);
 }
 
 /* ---- Gradient mesh blob drift ---- */
