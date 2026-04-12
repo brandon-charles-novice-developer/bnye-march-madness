@@ -30,11 +30,10 @@ function GameCard({ game }) {
         borderTop: isChampionship ? `2px solid ${brand.primary}` : undefined,
       }}
     >
-      <div className="flex items-center justify-between">
+      <div>
         <span className="text-[10px] uppercase tracking-wider font-semibold" style={{ color: roundColors[game.round] }}>
           {ROUND_LABELS[game.round]}
         </span>
-        <span className="text-[10px]" style={{ color: semantic.muted }}>{game.date}</span>
       </div>
 
       {/* Matchup */}

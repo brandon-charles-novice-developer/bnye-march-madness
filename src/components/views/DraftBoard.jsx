@@ -32,38 +32,25 @@ function DraftCell({ pick }) {
 
   return (
     <div
-      className="glass-card rounded-lg p-2.5 flex flex-col gap-1 transition-all duration-200 hover:-translate-y-0.5"
+      className="glass-card rounded-lg p-2.5 flex items-center gap-2 transition-all duration-200 hover:-translate-y-0.5"
       style={{
         opacity: isEliminated ? 0.5 : 1,
         borderLeft: `2px solid ${tierColor}`,
         minWidth: 120,
       }}
     >
-      <div className="flex items-center justify-between">
-        <span className="text-[10px] font-bold" style={{ color: tierColor }}>
-          #{pick.overall}
-        </span>
-        <span
-          className="inline-flex items-center justify-center w-5 h-5 rounded-full text-[9px] font-bold"
-          style={{ backgroundColor: `${tierColor}20`, color: tierColor }}
-        >
-          {pick.seed}
-        </span>
-      </div>
-
+      <span
+        className="inline-flex items-center justify-center w-5 h-5 rounded-full text-[9px] font-bold flex-shrink-0"
+        style={{ backgroundColor: `${tierColor}20`, color: tierColor }}
+      >
+        {pick.seed}
+      </span>
       <span
         className="text-xs font-semibold text-white leading-tight truncate"
         style={{ textDecoration: isEliminated ? 'line-through' : 'none' }}
       >
         {pick.player}
       </span>
-
-      <div className="flex items-center justify-between">
-        <span className="text-[10px]" style={{ color: semantic.muted }}>{pick.team}</span>
-        <span className="text-[10px] font-medium" style={{ color: accent.cyan }}>
-          {pick.ppg} ppg
-        </span>
-      </div>
     </div>
   )
 }

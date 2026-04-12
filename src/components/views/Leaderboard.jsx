@@ -6,7 +6,7 @@ import StatusBadge from '../shared/StatusBadge'
 import TrendLine from '../shared/TrendLine'
 import { useCountUp } from '../../hooks/useCountUp'
 import { useFadeIn } from '../../hooks/useFadeIn'
-import { brand, accent, semantic, tooltipStyle, roundColors, seedColors } from '../../tokens/colors'
+import { brand, accent, semantic, tooltipStyle, seedColors } from '../../tokens/colors'
 import leaderboard from '../../data/leaderboard'
 
 /* ── derived metrics (immutable) ── */
@@ -156,13 +156,6 @@ function PlayerRow({ player }) {
       <td className="py-2 px-3">
         <TrendLine data={roundData} color={isActive ? brand.primary : '#AFADAD'} width={100} height={24} />
       </td>
-      <td className="py-2 px-3 text-xs" style={{ color: '#AFADAD' }}>
-        {ROUNDS.map((r) => (
-          <span key={r} className="inline-block w-8 text-center" style={{ color: roundColors[r] }}>
-            {player.roundScores[r] || '-'}
-          </span>
-        ))}
-      </td>
       <td className="py-2 px-3">
         <StatusBadge status={isActive ? 'active' : 'eliminated'} size="xs" />
       </td>
@@ -211,13 +204,6 @@ function ManagerRow({ standing, rank }) {
         </td>
         <td className="py-3 px-3">
           <TrendLine data={roundData} color={brand.primary} />
-        </td>
-        <td className="py-3 px-3 text-xs">
-          {ROUNDS.map((r) => (
-            <span key={r} className="inline-block w-8 text-center" style={{ color: roundColors[r] }}>
-              {standing.roundTotals[r] || '-'}
-            </span>
-          ))}
         </td>
         <td className="py-3 px-3 text-xs" style={{ color: '#AFADAD' }}>
           <span
@@ -293,15 +279,6 @@ function StandingsTable() {
                 <SortHeader label="Active" field="activePlayers" width="70px" />
                 <th className="py-2 px-3" style={{ width: '100px' }}>
                   <span className="text-[11px] uppercase tracking-widest font-semibold" style={{ color: '#AFADAD' }}>Trend</span>
-                </th>
-                <th className="py-2 px-3">
-                  <span className="text-[11px] uppercase tracking-widest font-semibold" style={{ color: '#AFADAD' }}>
-                    {ROUNDS.map((r) => (
-                      <span key={r} className="inline-block w-8 text-center" style={{ color: roundColors[r] }}>
-                        {r === 'Championship' ? 'CH' : r}
-                      </span>
-                    ))}
-                  </span>
                 </th>
                 <th className="py-2 px-3 w-8" />
               </tr>
