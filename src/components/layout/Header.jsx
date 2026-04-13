@@ -3,10 +3,10 @@ import { brand, glass, semantic } from '../../tokens/colors'
 
 const navItems = [
   { to: '/',            label: 'Leaderboard' },
+  { to: '/scoring',     label: 'Scoring Engine' },
   { to: '/draft',       label: 'Draft Board' },
   { to: '/games',       label: 'Game Center' },
   { to: '/commentary',  label: 'Commentary' },
-  { to: '/scoring',     label: 'Scoring Engine' },
 ]
 
 export default function Header() {
