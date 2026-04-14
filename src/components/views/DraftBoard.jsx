@@ -148,7 +148,7 @@ function SeedLegend() {
 
 export default function DraftBoard() {
   return (
-    <div className="p-6 flex flex-col gap-6">
+    <div className="py-6 flex flex-col gap-6">
       <div className="flex items-center justify-between">
         <SectionLabel>
           Serpentine Draft — {draft.picks.length} Picks

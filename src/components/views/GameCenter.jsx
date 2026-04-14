@@ -152,7 +152,7 @@ export default function GameCenter() {
     : games.filter((g) => g.round === activeRound)
 
   return (
-    <div className="p-6 flex flex-col gap-6">
+    <div className="py-6 flex flex-col gap-6">
       <div className="flex items-center justify-between flex-wrap gap-4">
         <SectionLabel>{filtered.length} Games</SectionLabel>
         <RoundTabs active={activeRound} onChange={setActiveRound} />
